@@ -1,5 +1,4 @@
 
-
 html {
 	min-height: 100%
 	width: 100%;
@@ -11,9 +10,9 @@ body {
 	width: 100%;
 	background-image: url('http://nationalparksftw.weebly.com/uploads/2/4/6/7/24675926/693580_orig.jpg');
 	background-repeat: no-repeat;
-	background-size: 100%;
+	background-size: cover;
 	/*background-position: bottom 10%;*/
-	background-position: center;
+	/*background-position: center;*/
 
 
 }
@@ -35,32 +34,40 @@ body {
 	height: auto;
 	width: 100%;
 }
+
  .row {
- 	margin-top: 10%;
+ 	margin-top: 2%;
  	height: 20%;
  	width: 100%;
  }
 
 .survey {
 	/*background-image: url('states.jpeg');*/
-	background-size: 70%;
-	background-repeat: no-repeat;
-	background-position: center;
+	background-color: #77b5fe;
 	height: 100%;
 	font-size: 20px;
 	color: black;
+	border: red 2px solid;
 }
 
-#formSubmit {
-	margin-top: 4%;
-	color: white;
-	background-color: blue;
+.formQuestion {
+	padding-bottom: 2%;
+}
+
+#formSubmit, #startQuiz {
+	margin: 4% 4%;
+	color: black;
+	font-weight: bold;
+	background-image: url('https://s-media-cache-ak0.pinimg.com/originals/3b/1a/1f/3b1a1f00dd07c8ecb7f6f28c64a0613e.gif');
+	background-position: center;
 	width: 200px;
 	text-decoration: underline;
 
 }
 
-
+.divider {
+	padding: 0 2%;
+}
 
 /* The Modal (background) */
 .modal {
@@ -98,4 +105,10 @@ body {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+
+#friendsImg {
+	width: 60%;
+	height: auto;
 }

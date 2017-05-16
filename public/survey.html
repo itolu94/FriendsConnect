@@ -5,19 +5,32 @@
     <script src="https://code.jquery.com/jquery-3.1.1.js"></script>  
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
-    <title>Friends Connect</title>
+    <link rel="shortcut icon" href="http://www.gadgetos.com/photos/12200/12226/00001_small.jpg">
+
+    <title>Presidential</title>
 </head>
 <body> 
-
-  <div class="page-header text-center">
-    <p>Friends Connect</p>
-    <h4>Let us help you friend your next friend!</h4>	
-  </div>
   <div class="container">
+    <div class="page-header text-center">
+      <p>Presidential</p>
+      <h4>What president do you relate to the most?</h4> 
+    </div>
     <div class="row"> 
-        <div class="  col-md-6 col-md-offset-3 survey text-center" >
-            <form method="GET"  id ='friendsConnectQuestions'>
-             <div> 
+        <div class="  col-md-4 col-md-offset-4 survey text-center" >
+          <form method="GET"  id ='friendsConnectQuestions'>
+              <div class="formQuestion">
+                <label>Full Name:
+                <br> 
+                  <input type="text" name="fullName" placeholder="Thomas Smith" id='usersName' required="">
+                </label>
+              </div>
+              <div class="formQuestion">
+                <label>Images Link: 
+                <br>
+                  <input type="text" name="image" placeholder='Image Link Here' id='usersImg' required="">
+                </label>
+              </div>
+             <div class="formQuestion"> 
               <label>We need to make Russia our ally:  
               <br>
                 <select name="Q1" id="Q1" required="">
@@ -30,7 +43,7 @@
                 </select>
               </label>
              </div>
-             <div>
+             <div class="formQuestion">
               <label>Immigration is an important part of our econmony: 
               <br>
                 <select name="Q2" id="Q2" required="">
@@ -43,7 +56,7 @@
                 </select>
               </label>
             </div>
-            <div> 
+            <div class="formQuestion"> 
               <label>Every American deserves health care: 
               <br>
                 <select name="Q3" id="Q3">
@@ -56,7 +69,7 @@
                 </select>
               </label>
             </div>
-            <div>
+            <div class="formQuestion">
               <label>The greatest threat to America is ISIS: 
               <br>
                 <select name="Q4" id="Q4">
@@ -69,7 +82,7 @@
                 </select>
               </label>
             </div>
-            <div>
+            <div class="formQuestion">
               <label>Every American deserves the right to bare arms : 
               <br>
                 <select name="Q5" id="Q5">
@@ -82,7 +95,7 @@
                 </select>
               </label>
             </div>
-            <div>
+            <div class="formQuestion">
               <label>Buisness and banks need to be regulated: 
               <br>
                 <select name="Q6" id="Q6">
@@ -95,7 +108,7 @@
                 </select>
               </label>
             </div>
-            <div>
+            <div class="formQuestion">
               <label>Global warming is a real threat: 
               <br>
                 <select name="Q7" id="Q7">
@@ -108,7 +121,7 @@
                 </select>
               </label>
             </div>
-            <div>
+            <div class="formQuestion">
               <label> Every women gest to decide what to do with her body: 
               <br>
                 <select name="Q8" id="Q8">
@@ -121,7 +134,7 @@
                 </select>
               </label>
             </div>
-            <div>
+            <div class="formQuestion">
               <label>I consider myself a moderate: 
               <br>
                 <select name="Q9" id="">
@@ -134,7 +147,7 @@
                 </select>
               </label>
             </div>
-            <div>
+            <div class="formQuestion">
               <label>I stand for a literal interpation of the consititution: 
               <br>
                 <select name="Q10" id="">
@@ -146,13 +159,16 @@
                   <option value="1">1 (Strongly Disagree)</option>
                 </select>
               </label>
-             </div>
+             </div >
              <input type="submit" value="Submit" id='formSubmit'>
+             <div>
+               <a id='json' href="/api">Present JSON</a>
+               <span class="divider"> ||</span>
+               <a href="https://github.com/itolu94/FriendsConnect">Github Page</a>
+              </div>
             </form>
         </div>
     </div>
-    <!-- Trigger/Open The Modal -->
-    <button id="myBtn">Open Modal</button>
 
 <!-- The Modal -->
     <div id="myModal" class="modal">
@@ -160,7 +176,7 @@
       <!-- Modal content -->
       <div class="modal-content text-center">
         <span class="close">&times;</span>
-        <h1>You relate most with President: </h1>
+        <h1>You share the most traits with President: </h1>
           <h3 id="friendsName"></h3>
           <img src="" id="friendsImg" alt="Matched Freind">
       </div>
@@ -169,7 +185,7 @@
   </div>
 
 
-<script src="friendsConnect.js"></script>
+<script src="./javascript/presidentConnector.js"></script>
 </body>
 
 </html>

@@ -10,7 +10,6 @@ router.get('/', function(req,resp) {
 
 
 router.post('/presidentsurvey', function(req,resp) {
-	console.log(req.body);
 	resp.sendFile(path.join(__dirname, '../public', 'survey.html'));
 });
 

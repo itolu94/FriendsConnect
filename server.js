@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var path = require('path');
 
 var app = express();
-var PORT = 4133;
+var PORT = 4000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -11,30 +11,13 @@ app.use(bodyParser.text());
 
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-var friendsConnectMembers = [{
-    name: 'Sara Miles',
-    img: 'http://static.metro.se/1f6/41d/277479h1024-LARGE.jpg',
-    score: [2, 1, 4, 5, 3, 5, 2, 5, 2, 1]
-}, {
-    name: 'Thomas Jefferson',
-    img: 'https://www.whitehouse.gov/sites/whitehouse.gov/files/images/first-family/03_thomas_jefferson.jpg',
-    score: [2, 1, 2, 3, 4, 1, 2, 3, 1, 1]
 
-}, {
-    name: 'Barack Obama',
-    img: 'http://i.huffpost.com/gen/3135318/images/o-BARACK-OBAMA-THUMB-facebook.jpg',
-    score: [1, 5, 4, 3, 5, 2, 3, 4, 4, 4]
-}, {
-    name: 'Donald Trump',
-    img: 'http://static4.businessinsider.com/image/56c640526e97c625048b822a-480/donald-trump.jpg',
-    score: [3, 1, 4, 2, 3, 5, 1, 5, 4, 2]
-}];
 
 var index = require('./routing/htmlRoutes.js');
 var api = require('./routing/apiRoutes.js');
+var data = require('./data/friendsConnect.js');
 
 app.use(express.static(path.join(__dirname , 'public')));
-app.use(express.static(path.join(__dirname , 'data')));
 
 app.use('/', index);
 app.use('/api', api);
