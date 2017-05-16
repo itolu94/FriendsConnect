@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Friends Connect</title>
+</head> 
+<body>
+
+  <div class="page-header text-center">
+    <p>Friends Connect</p>
+    <h4>Let us help you friend your next friend!</h4>	
+  </div>
+
+  <div class="container">
+    <div class="row">         
+      <div class="col-sm-4 col-sm-offset-4 survey">
+
+        <div class="text-center surveyContent">
+          <h3> Welcome to Friends Connect</h3>
+
+            <form action="/presidentsurvey" method="post">
+              <label>Full Name: 
+                <input type="text" name="fullName" placeholder="Thomas Smith" id='usersName' required="">
+              </label>
+              <br>              
+              <label>Images Link: 
+                <input type="text" name="image" id='usersImg' required="">
+              </label>
+              <br>
+              <input type="Submit" id="startQuiz">
+            </form>
+
+          <div class="btn-group" role="group">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="friendsConnect.js"></script>
+</body>
+
+</html>
